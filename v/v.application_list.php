@@ -117,6 +117,9 @@ class ViewApplicationList
                                                     <button type="button" class="btn btn-xs btn-danger" onclick="if(confirm('<?php echo $GLOBALS['fw_lbl_confirm'] ?>'))<?php echo ApplicationList::ajaxclick("&del=$appinfo_id") ?>">
                                                         <i class="fa fa-trash bigger-120"></i>
                                                     </button>
+                                                     <button type="button" class="btn btn-xs btn-info" onclick="if(confirm('<?php echo $GLOBALS['fw_lbl_confirm'] ?>'))<?php echo ApplicationList::ajaxclick("&del=$appinfo_id") ?>">
+                                                        <i class="fa fa-eye bigger-120"></i>
+                                                    </button>
                                                 <?php
                                                 }
                                                 ?>
