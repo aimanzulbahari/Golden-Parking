@@ -89,11 +89,59 @@ class ViewApplicationList
                                             ?>
                                                 <td><?php echo $count ?></td>
                                                 <td><?php echo $appinfo_no_permohonan ?></td>
-                                                <td><?php echo $appinfo_jenis_permohonan ?></td>
+                                                
+                                                <td>
+                                                    <?php
+                                                    $JenisPermohonan = Db::chkval('gp_db.ref_application_type', 'rat_desc', "rat_id='$appinfo_jenis_permohonan'");
+
+                                                    // Default color
+                                                    $badge_style = 'background-color: #adb5bd;'; // Lain-Lain
+
+                                                    switch ((int)$appinfo_jenis_permohonan) {
+                                                        case 1: // Permohonan Baharu
+                                                            $badge_style = 'background-color: #3a86ff;';
+                                                            break;
+                                                        case 2: // Pembaharuan Permohonan
+                                                            $badge_style = 'background-color: #ff006e;';
+                                                            break;
+                                                        default:
+                                                            $badge_style = 'background-color: #adb5bd;';
+                                                            break;
+                                                    }
+
+                                                    echo "<span class='badge' style='$badge_style; color: white;'>$JenisPermohonan</span></div>";
+                                                    ?>
+                                                </td>
                                                 <td><?php echo $appinfo_nama_pemohon ?></td>
                                                 <td><?php echo $appinfo_tarikh_permohonan ?></td>
                                                 <td><?php echo $appinfo_tarikh_sah_sehingga ?></td>
-                                                <td><?php echo $appinfo_status_permohonan ?></td>
+                                                <td>
+                                                    <?php
+                                                    $StatusPermohonan = Db::chkval('gp_db.ref_applicaton_status', 'ras_desc', "ras_id='$appinfo_status_permohonan'");
+
+                                                    // Default color
+                                                    $badge_style = 'background-color: #adb5bd;'; // Lain-Lain
+
+                                                    switch ((int)$appinfo_status_permohonan) {
+                                                         case 1: // Draf
+                                                            $badge_style = 'background-color: #3a86ff;';
+                                                            break;
+                                                        case 2: // Hantar
+                                                            $badge_style = 'background-color: #3a86ff;';
+                                                            break;
+                                                        case 3: // Diluluskan
+                                                            $badge_style = 'background-color: #ff006e;';
+                                                            break;
+                                                        case 4: // Dibatalkan
+                                                            $badge_style = 'background-color: #ff006e;';
+                                                            break;
+                                                        default:
+                                                            $badge_style = 'background-color: #adb5bd;';
+                                                            break;
+                                                    }
+                                                    echo "<span class='badge' style='$badge_style; color: white;'>$StatusPermohonan</span>";
+                                                    ?>
+                                                </td>
 
                                             <?php
                                                 $cls_icon = 'fa-pencil';
