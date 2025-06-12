@@ -89,7 +89,6 @@ class ViewApplicationList
                                             ?>
                                                 <td><?php echo $count ?></td>
                                                 <td><?php echo $appinfo_no_permohonan ?></td>
-                                                
                                                 <td>
                                                     <?php
                                                     $JenisPermohonan = Db::chkval('gp_db.ref_application_type', 'rat_desc', "rat_id='$appinfo_jenis_permohonan'");
@@ -165,7 +164,7 @@ class ViewApplicationList
                                                     <button type="button" class="btn btn-xs btn-danger" onclick="if(confirm('<?php echo $GLOBALS['fw_lbl_confirm'] ?>'))<?php echo ApplicationList::ajaxclick("&del=$appinfo_id") ?>">
                                                         <i class="fa fa-trash bigger-120"></i>
                                                     </button>
-                                                     <button type="button" class="btn btn-xs btn-info" onclick="if(confirm('<?php echo $GLOBALS['fw_lbl_confirm'] ?>'))<?php echo ApplicationList::ajaxclick("&del=$appinfo_id") ?>">
+                                                    <button type="button" class="btn btn-xs btn-info" onclick="if(confirm('<?php echo $GLOBALS['fw_lbl_confirm'] ?>'))<?php echo ApplicationList::ajaxclick("&del=$appinfo_id") ?>">
                                                         <i class="fa fa-eye bigger-120"></i>
                                                     </button>
                                                 <?php
