@@ -71,6 +71,10 @@ class ApplicationClass
         return Db::list_grid($table, $field, $condition, 'Y');
     }
 
+    public static function GetAttachment() {
+        
+    }
+
     // Generate automated ref no
     public static function GetRefNo()
     {

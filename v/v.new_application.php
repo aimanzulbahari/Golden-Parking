@@ -136,35 +136,35 @@ class ViewApplicationClass
                         <div class="form-group">
                             <label class="col-md-2 control-label"><?php echo lbl('Salinan Kad Pengenalan :') ?></label>
                             <div class="col-md-10">
-                                <input type="file" name="" value="" class="form-control ">
+                                <input type="file" name="kad_pengenalan" class="form-control ">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-2 control-label"><?php echo lbl('Salinan Lesen Memandu :') ?></label>
                             <div class="col-md-10">
-                                <input type="file" name="" value="" class="form-control ">
+                                <input type="file" name="lesen_memandu" class="form-control ">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-2 control-label"><?php echo lbl('Salinan Geran Pendaftaran Kenderaan :') ?></label>
                             <div class="col-md-10">
-                                <input type="file" name="" value="" class="form-control ">
+                                <input type="file" name="geran_kenderaan" class="form-control ">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-2 control-label"><?php echo lbl('Salinan Bil Cukai Taksiran :') ?></label>
                             <div class="col-md-10">
-                                <input type="file" name="" value="" class="form-control ">
+                                <input type="file" name="cukai_taksiran" class="form-control ">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-2 control-label"><?php echo lbl('Slip Tiada Sekatan Urusniaga (iSekat) :') ?></label>
                             <div class="col-md-10">
-                                <input type="file" name="" value="" class="form-control ">
+                                <input type="file" name="isekat"    class="form-control ">
                             </div>
                         </div>
 
@@ -183,7 +183,6 @@ class ViewApplicationClass
                                     ?>
                                     <a onclick="<?php echo ApplicationClass::ajaxclick($btn_act) ?>;" class="btn btn-success"><i class="fa fa-save bigger-120"></i> <?php echo $lbl_act ?></a>
                                     <a onclick="<?php echo ApplicationClass::ajaxclick() ?>;" class="btn btn-warning"><i class="fa fa-times bigger-120"></i> Batal Permohonan</a>
-                                    <a onclick="<?php echo ApplicationClass::ajaxclick() ?>;" class="btn btn-primary"><i class="fa fa-times bigger-120"></i> Simpan Draf</a>
                                 </center>
                             </div>
                         </div>
